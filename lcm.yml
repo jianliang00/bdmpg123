@@ -1,0 +1,25 @@
+# Copyright 2022 ByteDance Ltd. and/or its affiliates. SPDX license identifier: LGPL-2.1-or-later"
+
+package: lynx/third_party/bdmpg123/android
+
+description: bdmpg123 android dynamic library and headers for ndk build
+
+# The root is optional and, if unspecified, defaults to ".". It specifies the
+# root directory of the files and directories specified below in "data".
+#
+# You won't typically need to specify this explicitly.
+root: 'android'
+
+# The install mode is optional. If provided, it specifies how a package
+# should be installed: "copy", which will copy the contents of the package
+# to the installation directory; and "symlink", which will create symlinks
+# to the contents of the package in the root inside the installation
+# directory.
+#
+# You won't typically need to specify this explicitly.
+install_mode: 'copy'
+compress: true
+data:
+  - dir: include
+  - dir: libs
+  - version_file: VERSION.json
