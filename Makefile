@@ -11,7 +11,7 @@ MPG123_BUILDDIR	:= temp/mpg123-${MPG123_VERSION}
 
 ANDROID_ARCHS	:= armeabi-v7a arm64-v8a
 
-BDMPG_VERSION	:= 0.1.6
+BDMPG_VERSION	:= 0.1.7
 
 define download_file
 	@mkdir -p temp
