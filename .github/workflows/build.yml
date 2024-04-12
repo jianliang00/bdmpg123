@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: echo
-      run: echo "${ANDROID_HOME}"
+      run: ls "${ANDROID_HOME}"
     - name: make
       run: make
