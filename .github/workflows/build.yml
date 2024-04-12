@@ -26,7 +26,7 @@ jobs:
     - uses: alexellis/upload-assets@0.4.1
       with:
         # The paths to the assets you want to upload as a JSON array. You can use a glob pattern.
-        asset_paths: android
+        asset_paths: android/**
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
