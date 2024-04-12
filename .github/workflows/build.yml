@@ -13,7 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: echo
-      run: ls "${ANDROID_HOME}/ndk"
     - name: make
       run: make
+    - name: show files
+      run: ls android
+    - uses: actions/upload-artifact@v4.3.1
+      with:
+        # Artifact name
+        name: artifact # optional, default is artifact
+        # A file, directory or wildcard pattern that describes what to upload
+        path: android
+          
