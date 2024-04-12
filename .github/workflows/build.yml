@@ -17,12 +17,10 @@ jobs:
       run: make
     - name: show files
       run: ls android
-    - name: package
-      run: tar zcvf artifacts.tar.gz android
-    - uses: nanoufo/action-upload-artifacts-and-release-assets@v2.0
+    - uses: actions/upload-artifact@v4.3.1
       with:
-      # A file or wildcard pattern that describes what to upload
-        path: artifacts.tar.gz
-        upload-release-files: true
-          
-          
+        # Artifact name
+        name: artifact # optional, default is artifact
+        # A file, directory or wildcard pattern that describes what to upload
+        path: android
+    - uses: fnkr/github-action-ghr@v1.3     
