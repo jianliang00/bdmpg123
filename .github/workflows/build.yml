@@ -12,16 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: nttld/setup-ndk@v1.4.2
+    - uses: ravinderjangra/android-ndk-toolchain-setup@0.2
       with:
-        # Exact version to use
-        ndk-version: 21.1.6352462
-        # Add installation directory to the PATH
+        # Platform arch
+        arch: armeabi-v7a arm64-v8a
+        # Path to use for NDK toolchain
+        install-location: .
+        # Force install toolchain
         add-to-path: true # optional, default is true
-        # Add installed NDK to the Android SDK
-        link-to-sdk: false # optional, default is false
-        # Use the local job cache on top of the runner tool cache
-        local-cache: true # optional, default is false
     - uses: actions/checkout@v3
     - name: configure
       run: ./configure
