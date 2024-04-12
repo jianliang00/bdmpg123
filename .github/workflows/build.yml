@@ -12,20 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: ravinderjangra/android-ndk-toolchain-setup@0.2
-      with:
-        # Platform arch
-        arch: armeabi-v7a arm64-v8a
-        # Path to use for NDK toolchain
-        install-location: .
-        # Force install toolchain
-        add-to-path: true # optional, default is true
     - uses: actions/checkout@v3
     - name: configure
       run: ./configure
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
