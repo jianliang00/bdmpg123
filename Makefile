@@ -30,7 +30,7 @@ $(ANDROID_ARCHS:%=%/libbdmpg123.so): ${MPG123_BUILDDIR}/.stamp android_build/And
 	mkdir -p ${MPG123_BUILDDIR}/jni android/include android/libs/armeabi-v7a android/libs/arm64-v8a
 	cp -r android_build/bdmpg123.h android/include/
 	cp -r android_build/* ${MPG123_BUILDDIR}/jni/
-	cd ${MPG123_BUILDDIR}/jni; ${NDK_BUILD}
+	cd ${MPG123_BUILDDIR}/jni
 	cp -r ${MPG123_BUILDDIR}/obj/local/armeabi-v7a/*.so android/libs/armeabi-v7a/
 	cp -r ${MPG123_BUILDDIR}/obj/local/arm64-v8a/*.so android/libs/arm64-v8a/
 
